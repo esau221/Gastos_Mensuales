@@ -1,0 +1,195 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right,  #FFFFFF , #E9F1FA, #00ABE4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Título principal */
+h1 {
+    color: #00ABE4;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 36px;
+}
+
+/* Flexbox para columnas */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.contenedor-gastos {
+    min-width: 300px;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 5px 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.contenedor-lista {
+    flex: 1;
+    min-width: 300px;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 5px 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilo para los títulos de sección */
+h2 {
+    color: #00ABE4;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Estilo de los inputs y formulario */
+.grupo-form {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 93%;
+    padding: 12px;
+    border: 1px solid #00ABE4;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #00ABE4;
+    outline: none;
+}
+
+/* Botón agregar gasto */
+.btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btnAgregar {
+    background-color: #00ABE4;
+    color: white;
+}
+
+.btnAgregar:hover {
+    background-color: #28a745;
+}
+
+/* Botones agregar gasto */
+.btnEliminar, .btnModificar {
+  
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 15px 60px;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btnEliminar {
+    background-color: #FFFFFF;
+    border: 1px solid red;
+}
+
+.btnEliminar:hover {
+    background-color: red;
+    color: #FFFFFF;
+}
+
+.btnModificar {
+    background-color: #FFFFFF;
+    border: 1px solid rgb(255, 132, 0);
+}
+
+.btnModificar:hover {
+    background-color: rgb(255, 132, 0);
+    color: #FFFFFF;
+}
+
+/* Tabla de gastos */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #00ABE4;
+    color: white;
+    font-size: 18px;
+}
+
+tbody {
+    display: block;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+tfoot {
+    font-weight: bold;
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+tfoot td {
+    border-top: 2px solid #00ABE4;
+}
+
+tbody::-webkit-scrollbar {
+    width: 8px;
+}
+
+tbody::-webkit-scrollbar-thumb {
+    background-color: #00ABE4;
+    border-radius: 10px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+}

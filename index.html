@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Gastos Mensuales</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="contenedor">
+       <h1>Control de Gastos Mensuales</h1>
+       <div class="row">
+        <!-- Añadir nuevo gasto-->
+        <div class="contenedor-gastos">
+            <h2>Añadir Nuevo Gasto</h2>
+            
+                <div class="grupo-form">
+                    <label>Nombre del Gasto</label>
+                    <input type="text" id="nombreGasto" placeholder="Ej: Colegio">
+                </div>
+                <div class="grupo-form">
+                    <label>Valor del Gasto</label>
+                    <input type="number" id="valorGasto" placeholder="Ej: 80000 (sin puntos)">
+                </div>
+                <div class="grupo-form">
+                    <label>Descripción del Gasto</label>
+                    <input type="text" id="desGasto" placeholder="Ej: Mensualidad">
+                </div>
+                <button id="btnAgregar" class=" btn btnAgregar" onclick="clickBoton();">Agregar Gasto</button>
+            
+        </div>
+        <!-- Lista de gastos -->
+         <div class="contenedor-lista">
+            <h2>Lista de Gastos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Valor CLP</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="listaDeGastos">
+                    <!-- Aqui se añadirán los gastos -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2"><strong>Total:</strong></td>
+                        <td id="totalGastos">$0</td>
+                        <td></td>  
+                    </tr>
+                </tfoot>
+            </table>
+         </div>
+       </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
